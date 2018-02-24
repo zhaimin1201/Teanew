@@ -1,0 +1,150 @@
+<header class="shop_head">
+	<div class="head_main" ng-show="visible">
+		<div>
+			<span>欢迎来到茉莉花购物商城</span>
+		</div>
+		<div class="head_main_list">
+			<a href="#">首页</a>
+			<a ng-click="login()">登录</a>
+			<a>注册</a>
+			<a href="">关于我们</a>
+		</div>
+	</div>
+	<div class="head_main" ng-hide="visible">
+		<div>
+			<span class="name">{{username}}您好，</span>
+			<span>欢迎来到茉莉花购物商城</span>
+		</div>
+		<div class="head_main_list">
+			<a href="#">首页</a>
+			<a ng-click="outlogin()">退出</a>
+			<a href="">我的订单</a>
+			<a href="">
+				<span>
+					<img src="images/gouwu.png" width="15">
+				</span>
+				<span ng-click="shopcart()">购物车</span>
+			</a>
+			<a href="">关于我们</a>
+		</div>
+	</div>
+</header>
+<section>
+	<div class="shop_container">
+		<div class="logopart shop_logopart">
+			<a href="index.html" class="shop_logo">茉莉花茶追溯平台</a>
+		</div>
+		<div class="shop_search">
+			<input type="text" placeholder="请输入茶叶名" />
+			<a>
+				<img src="images/search.png" width="30" height="30" />
+			</a>
+		</div>
+	</div>
+	<div>
+		<div class="shopshow">
+			<img ng-src="{{listImg}}" width="418" height="418"/>
+			<span>
+			<a href="">分享</a>
+			<a href="">收藏商品</a>
+		</span>
+		</div>
+		<div class="shopshow_con">
+			<span>
+				{{listTitle}}
+			</span>
+			<span>
+				<a>￥</a>
+				<a>{{listPice}}</a>
+			</span>
+			<div class="space">
+				<span>运费</span>
+				<span>10</span>
+			</div>
+			<div class="sales">
+				<span>月销量</span><span>1872</span>
+			</div>
+			<div class="sales_numet">
+				<span class="shop_number">数量</span>
+				<div class="shop_number_n">{{count}}</div>
+				<div class="shop_number_f">
+					<span ng-click="f1()"></span>
+					<span ng-click="f2()"></span>
+				</div>
+				<span class="stock">库存39387件 （每人限购20件，您还可购买19件）</span>
+			</div>
+			<div class="stock">
+				<a href="#" class="buy" ng-click="buy()">立即购买</a>
+				<a class="buy_shop" ng-click="shop()">加入购物车</a>
+			</div>	
+			<div class="stock commitment">
+				<span>承诺服务    正品保证    急速退款  赠送运费险 </span>
+			</div>
+		</div>
+	</div>
+	<div class="stock shop_detail">
+		<span class="deatail_con">商品详情</span>
+		<table>
+			<tr class="deatail_con_tb">
+				<td>
+					<span>产品名称</span>
+					<span>{{Brandname}}</span>
+				</td>
+				<td>
+					<span>生产日期</span>
+					<span>{{Data}}</span>
+				</td>
+				<td>
+					<span>厂址</span>
+					<span>{{Address}}</span>
+				</td>
+			</tr>
+			<tr class="deatail_con_tb">
+				<td>
+					<span>有无添加剂</span>
+					<span>{{Foodditive}}</span>
+				</td>
+				<td>
+					<span>保存方式</span>
+					<span>{{Storemethod}}</span>
+				</td>
+				<td>
+					<span>生产省份</span>
+					<span>{{Province}}</span>
+				</td>
+			</tr>
+			<tr class="deatail_con_tb">
+				<td>
+					<span>茶叶形状</span>
+					<span>{{Shape}}</span>
+				</td>
+				<td>
+					<span>级别</span>
+					<span>{{Level}}</span>
+				</td>
+				<td>
+					<span>产品标准号</span>
+					<span>{{Pnumber}}</span>
+				</td>
+			</tr>
+			<tr class="deatail_con_tb">
+				<td>
+					<span>采摘时节</span>
+					<span>{{Pluckingtime}}</span>
+				</td>
+				<td>
+					<span>净含量</span>
+					<span>{{Netcontent}}</span>
+				</td>
+				<td>
+					<span>包装</span>
+					<span>{{Packagetype}}</span>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<span class="meaasge">追溯信息</span>
+	<div class="erweima">		
+		<img src="http://114.67.224.249/tea/product/getQRcodeImage.do?tid=3" />
+    </div>
+</section>

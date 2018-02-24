@@ -1,0 +1,98 @@
+<header class="shop_head">
+	<div class="head_main" ng-show="visible">
+		<div>
+			<span>欢迎来到茉莉花购物商城</span>
+		</div>
+		<div class="head_main_list">
+			<a href="#">首页</a>
+			<a ng-click="login()">登录</a>
+			<a>注册</a>
+			<a href="">关于我们</a>
+		</div>
+	</div>
+	<div class="head_main" ng-hide="visible">
+		<div>
+			<span class="name">{{username}}您好，</span>
+			<span>欢迎来到茉莉花购物商城</span>
+		</div>
+		<div class="head_main_list">
+			<a href="#">首页</a>
+			<a ng-click="outlogin()">退出</a>
+			<a href="">我的订单</a>
+			<a href="">
+				<span>
+					<img src="images/gouwu.png" width="15">
+				</span>
+				<span ng-click="shopcart()">购物车</span>
+			</a>
+			<a href="">关于我们</a>
+		</div>
+	</div>
+</header>
+<section>
+	<div>
+		<div class="shop_container">
+			<div class="logopart shop_logopart">
+	          <a href="index.html" class="shop_logo">茉莉花茶追溯平台</a>
+	   		 </div>
+	   		 <div class="shop_search">
+	   		 	<input type="text" placeholder="请输入茶叶名" />
+	   		 	<a>
+	   		 		<img src="images/search.png"  width="30" height="30"/>
+	   		 	</a>
+	   		 </div>
+		</div>
+		<div class="new_shopping">
+			<div class="new_shopping_title">
+				最新茶叶
+			</divi>
+			<div class="new_shopping_content">
+				<ul>
+					<li ng-repeat="item in items" >
+						<div class="shopping" ng-click="toPage(item.tid)">
+							<img  ng-src="{{item.httppath}}" width ="197" height="197">
+							<span>{{item.content}}</span>
+							<span>
+								<a>评价 &nbsp;0</a> <a>收藏 &nbsp;68</a>
+							</span>
+							<span>
+								<a class="price1">￥</a>
+								<a class="price2">{{item.price}}</a>
+								<a class="price3">月销27笔</a>
+							</span>						
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="new_shopping_title">
+				热门茶叶
+			</divi>
+			<div class="new_shopping_content">
+				<ul>
+					<li ng-repeat="item in itemss">
+						<div class="shopping" ng-click="toPage(item.tid)">
+							<img  ng-src="{{item.httppath}}" width ="197" height="197">
+							<span>{{item.content}}</span>
+							<span>
+								<a>评价 &nbsp;0</a> <a>收藏 &nbsp;68</a>
+							</span>
+							<span>
+								<a class="price1">￥</a>
+								<a class="price2">{{item.price}}</a>
+								<a class="price3">月销27笔</a>
+							</span>		
+							<span>
+								
+							</span>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+
+</section>
+<footer>
+	
+</footer>

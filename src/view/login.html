@@ -1,0 +1,65 @@
+<div class="login_header">
+   <div class="logopart">
+          <a href="index.html" style="margin-top: 28px;">茉莉花茶追溯平台</a>
+    </div>
+	<div class="headerNav">
+		<a target="_blank" ng-click="go_main()">首页</a>
+		<a target="_blank" >关于我们</a>
+		<a target="_blank">新闻动态</a>
+		<a target="_blank">意见反馈</a>
+		<a target="_blank">联系我们</a>	
+	</div>
+</div>
+
+<div class="banner">
+
+<div class="login-aside">
+  <div id="o-box-up"></div>
+  <div id="o-box-down"  style="table-layout:fixed;">
+   <div class="error-box"></div>
+   
+   <form class="registerform">
+   <div class="fm-item">
+	   <label for="logonId" class="form-label">登陆：</label>
+	   <input type="text" placeholder="输入账号" id="username" class="i-text" ng-model="username">    
+       <div class="ui-form-explain"></div>
+  </div>
+  
+  <div class="fm-item">
+	   <label for="logonId" class="form-label">密码：</label>
+	   <input type="password" placeholder="请输入密码" id="password" class="i-text" ng-model="pwd">    
+       <div class="ui-form-explain"></div>
+  </div>
+  
+  <div class="fm-item pos-r">
+	   <label for="logonId" class="form-label">验证码</label>
+	   <input type="text" value="输入验证码" maxlength="100" id="yzm" class="i-text yzm" >    
+       <div class="ui-form-explain"><img src="images/yzm.jpg" class="yzm-img" /></div>
+  </div>
+  
+  <div class="fm-item">
+	   <label for="logonId" class="form-label"></label>
+	   <input type="submit" value=""  class="btn-login" ng-click="login_sure()"> 
+	   	<span class="zuce" ng-click="registered()">去注册</span>
+       <div class="ui-form-explain"></div>
+  </div>
+  
+  </form>
+  
+  </div>
+
+</div>
+
+	<div class="bd">
+		<ul>
+			<li class="login_banner"><a target="_blank"></a></li>
+		</ul>
+	</div>
+
+	<div class="hd"><ul></ul></div>
+</div>
+<div class="banner-shadow"></div>
+
+<div class="footer">
+   <p>Copyright © 2017-2022山西农业大学信息学院 All Rights Reserved.<a href="#">晋ICP备11001121</a></p>
+</div>

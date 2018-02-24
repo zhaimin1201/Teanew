@@ -1,0 +1,52 @@
+.buy_con{
+	border: 1px solid;
+    width: 100%;
+    margin: auto;
+    margin-top: 69px;
+    height: 100%;
+    display: none;
+    top: -69px;
+    z-index: 99;
+    background: #333;
+    opacity: .5;
+    position: fixed;
+    color: white;
+}
+.buy_con>li{
+	line-height: 55px;
+}
+.buy_inpu{
+	display: none;
+    border: 1px solid;
+    width: 440px;
+    height: 430px;
+    /* margin: auto; */
+    background: white;
+    position: fixed;
+    z-index: 9999999;
+    top: 55px;
+    left: 35%;
+}
+.buy_inpu>li{
+	line-height: 60px;
+	width: 75%;
+    margin-left: 18%;
+}
+.buy_inpu>li:nth-child(1){
+	margin-top: 71px;
+}
+.buy_inpu>li>input{
+	width: 240px;
+    height: 31px;
+    width: 67%;
+    margin: auto;
+}
+.buy_inpu>button{
+	font-size: 20px;
+    margin-left: 22%;
+    margin-top: 23px;
+    background: #f40;
+    width: 250px;
+    height: 41px;
+    color: white;
+}

@@ -1,0 +1,221 @@
+<div class="member_container">
+	<!--<div>
+		<form>
+			<input type="text">
+			<button>追溯查询</button>
+		</form>
+	</div>-->
+	<div class="member_main">
+		<div class="layui-tab">
+			<ul class="layui-tab-title">
+				<li class="layui-this">基本信息</li>
+				<li>田间操作</li>
+				<li>施肥信息</li>
+				<li>用药信息</li>
+				<li>加工信息</li>
+				<li>包装信息</li>
+				<li>监测信息</li>
+			</ul>
+			<div class="layui-tab-content">
+				<div class="layui-tab-item layui-show">
+					<table class="layui-table">
+						<tbody>
+							<tr>
+								<td width="87">商标</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>商品名称</td>
+								<td>{{brandname}}</td>
+							</tr>
+							<tr>
+								<td>规格</td>
+								<td>{{brandname}}</td>
+							</tr>
+							<tr>
+								<td>生产日期</td>
+								<td>{{date_tea}}</td>
+							</tr>
+							<tr>
+								<td>生产企业</td>
+								<td>{{faddress}}</td>
+							</tr>
+							<tr>
+								<td>生产基地</td>
+								<td>{{province}}</td>
+							</tr>
+							<tr>
+								<td>认证类别</td>
+								<td>{{level}}</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="layui-tab-item">
+					<table class="layui-table">
+						<colgroup>
+							<col width="150">
+							<col width="200">
+							<col>
+						</colgroup>
+						<thead>
+							<tr>
+								<th>操作内容</th>
+								<th>操作规范</th>
+								<th>操作人</th>
+								<th>操作时间</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr ng-repeat="item in items">
+								<td>{{item.content}}</td>
+								<td>{{item.standard}}</td>
+								<td>{{item.operator}}</td>
+								<td>{{item.date}}</td>
+							</tr>
+						</tbody>
+					</table>					
+				</div>
+				<div class="layui-tab-item">
+					<table class="layui-table">
+						<colgroup>
+							<col width="150">
+							<col width="200">
+							<col>
+						</colgroup>
+						<thead>
+							<tr>
+								<th>肥料名</th>
+								<th>单位使用量</th>
+								<th>操作规范</th>
+								<th>负责人</th>
+								<th>操作时间</th>
+							</tr>
+						</thead>
+						<tbody ng-repeat="item in items2">
+							<tr>
+								<td>{{item.content}}</td>
+								<td>{{item.standard}}</td>
+								<td>{{item.operating}}</td>
+								<td>{{item.operator}}</td>
+								<td>{{item.date}}</td>
+							</tr>
+
+						</tbody>
+					</table>		
+				</div>
+				<div class="layui-tab-item">
+					<table class="layui-table">
+						<colgroup>
+							<col width="150">
+							<col width="200">
+							<col>
+						</colgroup>
+						<thead>
+							<tr>
+								<th>农药名</th>
+								<th>防治对象</th>
+								<th>剂型和含量</th>
+								<th>施用量和稀释倍数</th>
+								<th>负责人</th>
+								<th>操作时间</th>
+							</tr>
+						</thead>
+						<tbody ng-repeat="item in items3">
+							<tr>
+								<td>{{item.content}}</td>
+								<td>{{item.operating}}</td>
+								<td>{{item.standard}}</td>
+								<td>{{item.rate}}</td>
+								<td>{{item.operator}}</td>
+								<td>{{item.date}}</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="layui-tab-item">
+					<table class="layui-table">
+						<colgroup>
+							<col width="150">
+							<col width="200">
+							<col>
+						</colgroup>
+						<thead>
+							<tr>
+								<th>加工日期</th>
+								<th>加工步骤</th>
+								<th>操作人</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>{{process}}</td>
+								<td>{{work}}</td>
+								<td>{{people}}</td>
+							</tr>
+						</tbody>
+					</table>	
+				</div>
+				<div class="layui-tab-item">
+					<table class="layui-table">
+						<colgroup>
+							<col width="150">
+							<col width="200">
+							<col>
+						</colgroup>
+						<thead>
+							<tr>
+								<th>包装时间</th>
+								<th>包装规格</th>
+								<th>价格</th>
+								<th>操作人</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>{{dateB}}</td>
+								<td>{{specification}}</td>
+								<td>{{priceB}}</td>
+								<td>{{people}}</td>
+							</tr>
+						</tbody>
+					</table>	
+				</div>
+				<div class="layui-tab-item">
+					<table class="layui-table">
+						<colgroup>
+							<col width="150">
+							<col width="200">
+							<col>
+						</colgroup>
+						<thead>
+							<tr>
+								<th>检测项目</th>
+								<th>检测部门</th>
+								<th>检测结果</th>
+								<th>检测时间</th>
+							</tr>
+						</thead>
+						<tbody ng-repeat="item in items4">
+							<tr>
+								<td>{{item.content}}</td>
+								<td>{{item.operator}}</td>
+								<td>{{item.date}}</td>
+								<td>{{item.standard}}</td>
+							</tr>
+						</tbody>
+					</table>	
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>

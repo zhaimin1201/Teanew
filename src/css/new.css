@@ -1,0 +1,24 @@
+.new_title{
+	font-size: 16px !important;
+    font-weight: bold !important;
+}
+.new_con{
+	font-size: 12px !important;
+    line-height: 30px !important;
+    color: #666 !important;
+    width: 442px !important;
+}
+.media_con{
+	border-bottom: 1px solid #eee;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    padding-left: 10px;
+}
+.media-body{
+	display: block !important;
+	width: auto !important;
+	margin-bottom: 35px !important;
+}
+.pull-left{
+	margin-right: 15px !important;
+}
