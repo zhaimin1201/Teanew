@@ -15,13 +15,15 @@ function shoplistCtrIn($scope,$state,$rootScope,service,$interval){
 	$scope.username=loginuser;
 	var number1=$scope.count;
 	//判断是否登录 
-	if(sessionStorage.loginuser==""){
-		 $scope.visible = true;
-		 //加入购物车
-
-	}else{
-		$scope.visible = false;
-	}
+	if(sessionStorage.loginuser==""||(typeof(sessionStorage.loginuser)=="undefined")){
+			 $scope.visible = true;
+			 console.log("no")
+	
+		}else{
+			$scope.visible = false;
+			console.log("yes")
+		}
+		
 
 	//点击登录跳转到登录界面
 	$scope.login=function(){
@@ -49,27 +51,32 @@ function shoplistCtrIn($scope,$state,$rootScope,service,$interval){
 	}	
 	//加入购物车
 	$scope.shop=function(){
-		$.ajax({
-			type:"post",
-			url:"http://114.67.224.249/tea/cart/addCart.do?tid="+id+"&count="+number1+"&JSESSIONID="+sessionStorage.cookie,
-			success:function(msg){
-				if(msg.state==200){
-					alert("添加成功");
-				}else{
-					alert("您尚未登录");
+		if(typeof(sessionStorage.cookie)=="undefined"){
+				alert("请先登录")
+		}else{
+			$.ajax({
+				type:"post",
+				url:"http://114.67.224.249/tea/cart/addCart.do?tid="+id+"&count="+number1+"&JSESSIONID="+sessionStorage.cookie,
+				success:function(msg){
+					if(msg.state==200){
+						alert("添加成功");
+					}else{
+						alert("您尚未登录");
+					}
 				}
-			}
-		});
+			});
+		}
+		
 		
 	}	
 	//查看购物车  点击购物车跳转到购物车页面
-	$scope.shopcart=function(){
+	$scope.shopcart=function(){			
 			$.ajax({
 				type:"post",
 				url:"http://114.67.224.249/tea/cart/getCart.do?&JSESSIONID="+sessionStorage.cookie,
 				success:function(msg){
 //					var data=msg.cart.allCartItem;
-
+					console.log(msg)
 					sessionStorage.shopcar=JSON.stringify(msg.cart.allCartItem);
 					console.log(msg.cart.allCartItem)
 					$state.go("shopcart");

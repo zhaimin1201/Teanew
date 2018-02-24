@@ -539,3 +539,6 @@ filter:progid:DXImageTransform.Microsoft.gradient( GradientType = 0,startColorst
 	color: #FFF9EC !important;
 	cursor: pointer;
 }
+label.form-label{
+	border: none !important;
+}
